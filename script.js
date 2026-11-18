@@ -9,3 +9,10 @@ let optionDisciplina = document.querySelectorAll('option')
 const inputNota = document.querySelector('.input-nota')
 const botaoEnviar = document.querySelector('button')
 
+/*
+
+function verNota(){
+    console.log(inputNome.value);
+}
+
+*/

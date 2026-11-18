@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -9,16 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>Sistema de Aprovação</title>
-    <script src="./script.js"></script>
+    <title>Sistema de AprovaÃ§Ã£o</title>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
     <div class="div-main">
         <header>
             <h1>Descubra sua Nota</h1>
-            <p class="p-main">Insira as informações necessárias e descubra o resultado!
-                Lembre-se de revisar as informações.</p>
+            <p class="p-main">Insira as informaÃ§Ãµes necessÃ¡rias e descubra o resultado!
+                Lembre-se de revisar as informaÃ§Ãµes.</p>
         </header>
 
         <form>
@@ -26,32 +26,32 @@
             <input type="text" placeholder="Digite seu nome..." id="nome" class="input-name">
             <label for="email">Email:</label>
             <input type="email" placeholder="Digite seu melhor email..." id="email" class="input-email">
-            <label for="instituicao">Instituição:</label>
-            <input type="text" placeholder="Instituição da prova..." id="instituicao" class="input-inst">
+            <label for="instituicao">InstituiÃ§Ã£o:</label>
+            <input type="text" placeholder="InstituiÃ§Ã£o da prova..." id="instituicao" class="input-inst">
             <label for="disciplina">Disciplina:</label>
             <select name="disciplina" id="disciplina">
                 <option value="">Selecione uma disciplina</option>
-                <option value="matematica">Matemática</option>
-                <option value="portugues">Português</option>
-                <option value="historia">História</option>
+                <option value="matematica">MatemÃ¡tica</option>
+                <option value="portugues">PortuguÃªs</option>
+                <option value="historia">HistÃ³ria</option>
                 <option value="geografia">Geografia</option>
-                <option value="fisica">Física</option>
-                <option value="quimica">Química</option>
+                <option value="fisica">FÃ­sica</option>
+                <option value="quimica">QuÃ­mica</option>
                 <option value="biologia">Biologia</option>
-                <option value="ingles">Inglês</option>
+                <option value="ingles">InglÃªs</option>
                 <option value="espanhol">Espanhol</option>
                 <option value="filosofia">Filosofia</option>
                 <option value="sociologia">Sociologia</option>
                 <option value="arte">Arte</option>
-                <option value="educacao-fisica">Educação Física</option>
-                <option value="informatica">Informática</option>
+                <option value="educacao-fisica">EducaÃ§Ã£o FÃ­sica</option>
+                <option value="informatica">InformÃ¡tica</option>
                 <option value="economia">Economia</option>
             </select>
 
             <label for="nota">Nota</label>
             <input type="number" id="nota" min="0" max="10" class="input-nota">
 
-            <button type="submit">Enviar</button>
+            <button type="button" onclick="verNota()">Enviar</button>
         </form>
         <div class="div-aviso">
             <p class="p-div"></p>
