@@ -20,28 +20,57 @@ function verNota(){
 
 botaoEnviar.addEventListener('click', () => {
     let media = 7;
+    const nota = Number(inputNota.value);
 
-    if(inputNota.value >= media){
+    const containerAviso = document.querySelector('.div-aviso');
+    
+
+    if (inputNota.value === '') {
+    return;
+}
+
+    containerAviso.replaceChildren();
+
+    if(nota >= media){
         const aviso = document.createElement('div');
-        aviso.style.backgroundColor = '##39D252';
+        aviso.style.backgroundColor = '#39D252';
         aviso.style.width = '500px';
-        aviso.style.height = '400px';
+        aviso.style.height = '250px';
         aviso.style.borderRadius = '20.5px';
         aviso.style.display = 'flex';
         aviso.style.alignItems = 'center';
         aviso.style.justifyContent = 'center';
 
         let paragrafoAviso1 = document.createElement('p');
-        paragrafoAviso1.textContent = `Parabéns ${inputNome.value}! Você foi aprovado pela instuição ${inputInst.value}, ao realizar a prova de ${select.value} com a nota ${inputNota.value}. Estamos felizes pela sua conquista!`
+        paragrafoAviso1.textContent = `Parabéns ${inputNome.value}! Você foi aprovado pela instituição ${inputInst.value}, ao realizar a prova de ${select.value} com a nota ${inputNota.value}. Estamos felizes pela sua conquista!`
         paragrafoAviso1.style.width = '460px';
         paragrafoAviso1.style.textAlign = 'justify';
         paragrafoAviso1.style.color = '#FFFFFF';
-        paragrafoAviso1.style.fontSize = '20px';
+        paragrafoAviso1.style.fontSize = '18px';
 
         aviso.appendChild(paragrafoAviso1);
+        containerAviso.appendChild(aviso);
 
-        document.querySelector('.div-aviso').appendChild(aviso);
     } else {
+        const aviso2 = document.createElement('div');
+
+        aviso2.style.backgroundColor = '#c63131';
+        aviso2.style.width = '500px';
+        aviso2.style.height = '250px';
+        aviso2.style.borderRadius = '20.5px';
+        aviso2.style.display = 'flex';
+        aviso2.style.alignItems = 'center';
+        aviso2.style.justifyContent = 'center';
+
+        let paragrafoAviso2 = document.createElement('p');
+        paragrafoAviso2.textContent = `Infelizmente ${inputNome.value}, você foi reprovado(a)! A sua nota não atingiu a média da instituição ${inputInst.value} - a média é ${media}, a sua nota foi ${inputNota.value}.`
+        paragrafoAviso2.style.width = '460px';
+        paragrafoAviso2.style.textAlign = 'justify';
+        paragrafoAviso2.style.color = '#FFFFFF';
+        paragrafoAviso2.style.fontSize = '18px';
+
+        aviso2.appendChild(paragrafoAviso2);
+        containerAviso.appendChild(aviso2);
         
     }
 });
