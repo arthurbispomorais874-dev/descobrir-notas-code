@@ -31,8 +31,13 @@ botaoEnviar.addEventListener('click', () => {
 
     containerAviso.replaceChildren();
 
+    if (!inputNota.reportValidity()) {
+        return;
+    }
+
     if(nota >= media){
         const aviso = document.createElement('div');
+        aviso.classList.add('aviso-animado');
         aviso.style.backgroundColor = '#39D252';
         aviso.style.width = '500px';
         aviso.style.height = '250px';
@@ -53,6 +58,7 @@ botaoEnviar.addEventListener('click', () => {
 
     } else {
         const aviso2 = document.createElement('div');
+        aviso2.classList.add('aviso-animado');
 
         aviso2.style.backgroundColor = '#c63131';
         aviso2.style.width = '500px';

@@ -5,6 +5,22 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.aviso-animado {
+    animation: aparecerDeCima 500ms ease-out both;
+}
+
+@keyframes aparecerDeCima {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     height: 200vh;
     background: #020024;
