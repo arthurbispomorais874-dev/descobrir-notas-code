@@ -1,4 +1,4 @@
-# Descubra sua Nota
+# Insira sua Nota e Descubra o Resultado
 
 Uma aplicação web simples para consultar o resultado de uma avaliação. Informe os dados da prova e a nota para receber uma mensagem personalizada de aprovação ou reprovação.
 
