@@ -1,12 +1,11 @@
-/* Mapeamento dos elementos */
+/* Mapeando e Registrando os elementos nas variáveis */
 
-let form = document.getElementsByTagName('form')
-let inputName = document.getElementsByClassName('.input-name')
-let inputEmail = document.getElementsByClassName('.input-email')
-let inputInst = document.getElementsByClassName('.input-inst')
-let select = document.getElementsByTagName('select')
-let options = document.querySelectorAll('option')
-let inputNota = document.getElementsByClassName('.input-nota')
-let buttonEnviar = document.getElementsByTagName('button')
-let divAviso = document.getElementsByClassName('.div-aviso')
-let pDiv = document.getElementsByClassName('.p-div')
+const form = document.querySelector('form');
+const inputNome = document.querySelector('.input-name')
+const inputEmail = document.querySelector('.input-email')
+const inputInst = document.querySelector('.input-inst')
+const select = document.querySelector('select')
+let optionDisciplina = document.querySelectorAll('option')
+const inputNota = document.querySelector('.input-nota')
+const botaoEnviar = document.querySelector('button')
+
